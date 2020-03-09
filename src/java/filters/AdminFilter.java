@@ -50,7 +50,7 @@ public class AdminFilter implements Filter {
                 chain.doFilter(request, response);
             else {
                 HttpServletResponse res = (HttpServletResponse) response;
-                res.sendRedirect("login");
+                res.sendRedirect("home");
             }
         } catch (Exception ex) {
             Logger.getLogger(AdminFilter.class.getName()).log(Level.SEVERE, null, ex);

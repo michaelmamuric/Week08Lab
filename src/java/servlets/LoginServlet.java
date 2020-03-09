@@ -58,9 +58,10 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("users");
                 else if(userRoleID == ROLE_REGULAR)
                     response.sendRedirect("home");
-                } catch (Exception ex) {
-                    Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
-                }
+            } 
+            catch (Exception ex) {
+                Logger.getLogger(LoginServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else {
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
